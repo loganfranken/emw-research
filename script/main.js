@@ -1,7 +1,7 @@
-const MINIMUM_TYPING_TIMEOUT = 5;
-const MAXIMUM_TYPING_TIMEOUT = 10;
+const MINIMUM_TYPING_TIMEOUT = 40;
+const MAXIMUM_TYPING_TIMEOUT = 50;
 
-const getRandomTypingTimeout = () => Math.floor(Math.random() * (MINIMUM_TYPING_TIMEOUT - MAXIMUM_TYPING_TIMEOUT) + MAXIMUM_TYPING_TIMEOUT);
+const getRandomTypingTimeout = () => Math.floor(Math.random() * (MAXIMUM_TYPING_TIMEOUT - MINIMUM_TYPING_TIMEOUT) + MAXIMUM_TYPING_TIMEOUT);
 
 const typingOps = [...document.querySelectorAll("[data-typing]")].map((elem) => {
     const text = elem.textContent.trim();
